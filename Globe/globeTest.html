@@ -6,12 +6,15 @@
     <style>
       html, body{padding: 0; margin: 0; background-color: black;}
         main{background:black}
+          /* Fakediv needs to have visibility:hidden, display:none doesnt work*/
         #fakediv{float:center; width: 800px; height: 400px; visibility:hidden;}
         #earth_div{float:center; width: 800px; height: 400px; z-index = 0}
       </style>
           </head>
+    /* Doing with body unload works well. Stores the output of double globe (which is two identical globes), into two seperate variables*/
     <body onload="([globe, fakeglobe] = doubleGlobe(20,122, earth_div, fakediv)) ">
          <main>
+           /* Buttons to test specific things */
           <input type="button" value="fly to food" onclick="flyToFood(44.17832,-94.0075, 15, globe, fakeglobe)">
         <input type="button" value="zoom level" onclick="alert(globe.getZoom())">
           <input type="button" value="addpopup" onclick="addPopup(44.17832,-94.0075,'woo', globe)">
