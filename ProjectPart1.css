@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/* our color pallete is at
+https://coolors.co/export/pdf/f7c59f-767b91-c7ccdb-e1e5ee-382633 */
+
+html{
+    font-family: Tahoma, Geneva, sans-serif;
+
+    align-content: stretch;
+    background-color: white;
+	/*background-image: url(images.gif);
+	background-repeat: repeat-x | repeat-y*/
+    color:#382633;
+}
+
+
+/*----------*/
+header{
+    background-color: #382633;
+    height: 100px;
+    width: auto;
+    color:white;
+}
+
+header > img#image {
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+
+header > h2#websiteName {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 300%;
+    float: left;
+}
+
+header > h4#tagLine {
+    margin-left: 15px;
+    font-size: 116%;
+    float: left;
+}
+
+/*----------*/
+.topNav a.current {
+    color: darkblue;
+}
+
+.topNav {
+  width: 790px;
+  height: 35px;
+  font-size: 15px;
+  text-align: center;
+  background-color: white;
+  border: black;
+}
+
+.categories h2{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.topNav li {
+    display: inline-block;
+    padding: 0px 10px
+}
+
+.topNav a {
+    padding: 10px 35px; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #382633;
+    float: left;
+}
+.topNav a:hover {
+    background-color: lightgray
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------*/
+body {
+    width: 800px;
+    background: #E1E5EE;
+    border: 5px solid #767B91;
+    box-shadow: 0px 0px 10px 7px #767B91;
+    
+    margin: auto;
+}
+
+body > h1 {
+    font-size: 150%;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+body > h2 {
+    font-size: 125%;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	text-align: center;
+}
+
+body > h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+
+#deranged a{
+    color: orange;
+    font-weight: bold;
+    font-size: 100%;
+    text-decoration: underline;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+table caption {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+th, td {
+    padding: .2em .7em;
+    font-size: 18px;
+}
+
+td a {
+    text-decoration: underline;
+    color: black;
+}
+
+.sideHeads {
+    text-align: left;
+    font-weight: bold;
+}
+
+.topHeads {
+    font-weight: bold;
+    text-align: center;
+    color: darkgray;
+}
+
+#emailform {
+    margin-left: 15px;
+}
+
+label {
+    float: left;
+    width 8em;
+    text-align: right;
+    display: block;
+    margin-right: 0.5em;
+}
+
+input {
+    width: 20em;
+    margin-left: 6em;
+}
+
+#submit {
+    color: black;
+    background-color: orange;
+    border: 2px solid black;
+    width: 10em;
+    margin-left: 4.5em;
+}
+
+/*----------*/
+footer
+{
+    border-top: 5px solid lightblue;
+    font-size: 75%;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    clear: both;
+}
+
+h4 {
+	;
+}
+
+footer h2 {
+   font-weight: bold;
+}
+
+#zip {
+    padding: 10px 4px;
+    margin-left: 10px;
+    color: black;
+}
+
+h1#enterInfo {
+    text-align: center;
+	font-size: 15pt;
+    color: #382633;
+}
+
+#cuisine {
+    padding: 10px 70px;
+    margin-left: 0px;
+}
+
+
+/*
+#sideNav a:link, #sideNav a:visited {
+   color: black;
+}
+
+nav.sideNav a:hover, nav.sideNav a:active {
+    color: darkgreen;
+    text-decoration: underline;
+}
+*/
+
+/*
+ Horizontal Navigation Sty
+les 
+nav.topNav a {
+   background-color: teal;
+   font-size: 1.4em;
+   line-height: 1.8em;
+   text-align: center;
+}  
+
+nav.topNav a:link, nav.topNav a:visited {
+   color: red;
+}
+
+nav.topNav a:hover, nav.topNav a:active {
+   background-color: darkgray;
+}
+*/
