@@ -17,7 +17,7 @@ html{
 /*----------*/
 header{
     background-color: #382633;
-    height: 100px;
+    height: 120px;
     width: auto;
     color:white;
 }
@@ -40,6 +40,7 @@ header > h4#tagLine {
     margin-left: 15px;
     font-size: 116%;
     float: left;
+    margin-top: -30px;
 }
 
 /*----------*/
@@ -51,26 +52,42 @@ header > h4#tagLine {
   width: 790px;
   height: 35px;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   background-color: white;
-  border: black;
+    margin-top: -15px;
 }
 
 .categories h2{
 	text-align: center;
 }
 
+.globeframe{
+    text-align: center;
+    background-color: #767B91;
+    height: 700px;
+    width: auto;
+    margin: 40px;
+    
+}
 
+.globeframe h2{
+    color: white;
+    font-size: 20pt;
+}
 
-
-
+.globeframe pre{
+    color: white;
+    
+}
 
 
 
 
 .topNav li {
     display: inline-block;
-    padding: 0px 10px
+    padding: 0px 12px;
+    margin-top: -12px;
+    
 }
 
 .topNav a {
