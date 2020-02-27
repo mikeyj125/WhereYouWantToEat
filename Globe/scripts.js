@@ -33,7 +33,7 @@ function fakeFindPort(lat, lon, zoom, fakeglobe){
     /* Offset is needed if we want to fit the popup window on screen */
     var offsetlat = .005
     var offsetlon = .000
-    fakeglobe.setView([(lat + offsetlat), (lon + offetlon)], zoom);
+    fakeglobe.setView([(lat + offsetlat), (lon + offsetlon)], zoom);
     viewport = fakeglobe.getBounds();
     return viewport
 }
