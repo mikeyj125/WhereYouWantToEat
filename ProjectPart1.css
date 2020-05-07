@@ -5,42 +5,54 @@ https://coolors.co/export/pdf/f7c59f-767b91-c7ccdb-e1e5ee-382633 */
 
 html{
     font-family: Tahoma, Geneva, sans-serif;
-
     align-content: stretch;
-    background-color: white;
+    background-color: #000000;
 	/*background-image: url(images.gif);
 	background-repeat: repeat-x | repeat-y*/
     color:#382633;
 }
 
+.hero-content {
+  position: absolute;
+  color: #FFF;
+  left: 40px;
+  bottom: 180px;
+}
 
 /*----------*/
 header{
-    background-color: #382633;
-    height: 120px;
+    background-image: url(header.png);
+    background-size:cover;
+    box-shadow: 11px 5px 25px 17px #1f1f1f;
+    height: 180px;
     width: auto;
     color:white;
 }
 
 header > img#image {
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 15px;
     float: left;
 }
 
 header > h2#websiteName {
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 15px;
     font-weight: bold;
     font-size: 300%;
-    float: left;
+    text-align: center;
+    padding-top: 20px;
+    
 }
 
 header > h4#tagLine {
-    margin-left: 15px;
+    
     font-size: 116%;
-    float: left;
-    margin-top: -30px;
+    text-shadow: 5px, 5px, #000000;
+    text-align: center;
+    margin-top: -50px;
+    line-height: 30pt;
+
 }
 
 /*----------*/
@@ -80,7 +92,18 @@ header > h4#tagLine {
     
 }
 
+.form{
+    display: block;
+}
 
+.Forms{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    
+}
 
 
 .topNav li {
@@ -114,10 +137,10 @@ header > h4#tagLine {
 
 /*----------*/
 body {
-    width: 800px;
-    background: #E1E5EE;
-    border: 5px solid #767B91;
-    box-shadow: 0px 0px 10px 7px #767B91;
+    width: 80%;
+    background: #bfbfbf;
+    border: 0px solid #767B91;
+    box-shadow: 0px 0px 25px 17px #6f6f6f;
     
     margin: auto;
 }
@@ -189,14 +212,16 @@ td a {
 label {
     float: left;
     width 8em;
-    text-align: right;
+    text-align: center;
     display: block;
-    margin-right: 0.5em;
+    margin-right: -4em;
+    
 }
 
 input {
     width: 20em;
     margin-left: 6em;
+    text-align: center;
 }
 
 #submit {
@@ -234,8 +259,13 @@ footer h2 {
 
 h1#enterInfo {
     text-align: center;
-	font-size: 15pt;
+	font-size: 24pt;
     color: #382633;
+}
+
+label#enterInfo{
+    font-size: 15px;
+    
 }
 
 #cuisine {
@@ -255,21 +285,33 @@ nav.sideNav a:hover, nav.sideNav a:active {
 }
 */
 
-/*
- Horizontal Navigation Sty
-les 
+
+ /*Horizontal Navigation Sty
+les */
+nav.topNav{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: #382633
+}
+
 nav.topNav a {
-   background-color: teal;
+   background-color: ;
    font-size: 1.4em;
    line-height: 1.8em;
    text-align: center;
+    display: block;
 }  
 
 nav.topNav a:link, nav.topNav a:visited {
-   color: red;
+   color: white;
 }
 
 nav.topNav a:hover, nav.topNav a:active {
    background-color: darkgray;
 }
-*/
+
+nav.topNav li{
+    
+}
+
