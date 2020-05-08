@@ -73,21 +73,22 @@ header > h4#tagLine {
 	text-align: center;
 }
 
-.globeframe{
+#globeframe{
     text-align: center;
     background-color: #767B91;
     height: 700px;
     width: auto;
     margin: 40px;
+    z-index = 0;
     
 }
 
-.globeframe h2{
+#globeframe h2{
     color: white;
     font-size: 20pt;
 }
 
-.globeframe pre{
+#globeframe pre{
     color: white;
     
 }
@@ -312,6 +313,27 @@ nav.topNav a:hover, nav.topNav a:active {
 }
 
 nav.topNav li{
-    
-}
 
+}
+/* Stuff to make the globes work */
+#fakediv{
+    height: 700px;
+    width: auto;
+    visibility:hidden;
+    z-index = 1
+}
+#fakemap{
+    float:center;
+    height: 1px;
+    width: auto;
+    margin: 1px;
+    visibility:hidden;
+}
+        
+#earth_div{
+    float:center;
+    height: 700px;
+    width: auto;
+    margin: 40px;
+    z-index = 0
+}
