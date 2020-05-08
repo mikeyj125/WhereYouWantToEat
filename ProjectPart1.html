@@ -6,13 +6,17 @@
         <meta charset="utf-8">
         <title>Where You Wanna Eat?</title>
         <link href="ProjectPart1.css" rel="stylesheet">
-        
-        <style type="text/css">
-        </style>
+        <script src="http://www.webglearth.com/v2/api.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIrhidN5aiBFBVK9kgPDrISe0_MePQpw&libraries=places"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="globe.js"></script>
+        <script>
+
+        </script>
     </head>
     
     <!--Main Body Text-->
-    <body>
+    <body  onload="([globe, fakeglobe] = doubleGlobe(20,122, globeframe, fakediv)) ">
         <header>
             
             <h2 id="websiteName">Where You Wanna Eat?</h2><br>
@@ -36,23 +40,23 @@
           <h1 id="enterInfo">Please enter the following information: </h1>
           <br>
           <br>
-           <form action="/dataPage.php">
+           <form>
 
              <label for="zip" style="text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZIP CODE: &nbsp;</label>
-              <input type="text" id="zip" name="zip" placeholder="Enter ZIP Code"><br><br>
+              <input type="text" id="zip" name="zip" placeholder="Enter ZIP Code" on><br><br>
               
               <label for="cars" style="text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUISINE: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <select id="cuisine" placeholder="SELECT FOOD">
-                  <option value="ALL">ALL FOOD TYPES</option>
                   <option value="american">AMERICAN FOOD</option>
                   <option value="chinese">CHINESE FOOD</option>
                   <option value="greek">GREEK FOOD</option>
                   <option value="mexican">MEXICAN FOOD</option>
                   <option value="indian">INDIAN FOOD</option>
+                  <option value="pizza">Pizza</option>   
               </select>
               <br><br>
 
-              <input type="submit" value="Generate Resturant">
+              <input type="button" onclick="getPlace()" value="SUBMIT">
            </form> 
            </div>
         </form>
@@ -61,48 +65,8 @@
 
           
           
-    <div class="globeframe">    
-          <br>
-          <br>
-    <h2 id="Categories">Here's where the globe and food choice will go</h2>
-<!-- Food finding JS and such here -->
-      <pre>
-    !
-    !
-    ^
-    / \
-    /___\
-    |=   =|
-    |     |
-    | G   |
-    | O   |
-    | O   |
-    | D   |
-    |     |
-    | F   |
-    | O   |
-    | O   |
-    | D   |
-    |     |
-    |     |
-    |     |
-    /|##!##|\
-    / |##!##| \
-    /  |##!##|  \
-    |  / ^ | ^ \  |
-    | /  ( | )  \ |
-    |/   ( | )   \|
-    ((   ))
-    ((  :  ))
-    ((  :  ))
-    ((   ))
-    (( ))
-    ( )
-    .
-    .
-    .
-      
-      </pre>
+    <div id="globeframe">    
+
        
        
        
@@ -113,8 +77,8 @@
       <br>
       <br>
       <br> 
-        
-    </body>
+<div id="fakediv"></div><div id="fakemap"></div>
+
 	
 <!--   !
        !
@@ -158,5 +122,6 @@
     <footer>
         <h2>&copy;2020 Mike, Pat, Callie. COVID-19 Simester</h2>
     </footer>
-    
+        </body>
 </html>
+        
