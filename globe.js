@@ -20,7 +20,7 @@ function initialize(lati, long, divtype) {
 
 function addPopup(lat, lon, popstring, earth){
        var marker = WE.marker([lat, lon]).addTo(earth);
-    marker.bindPopup(popstring, {maxWidth: 400, closeButton: true}).openPopup(); 
+    marker.bindPopup(popstring, {maxWidth: 600, closeButton: true}).openPopup(); 
 }
                               
 function flyToFood(lat, lon, zoom, earth, fakeearth) {
@@ -45,10 +45,7 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 function presentWinner(name, address, phone, website, lat, lon){
-    if (website == null){
-        website = " "
-    }
-    var contents = "<h1>" + name + "</h1><div id='address'>" + address + "</div><div id='phone'>" + phone + "</div><div id='website>" + website + "</div>";
+    var contents = "<div id='restname'>" + name + "</div><div id='address'>" + address + "</div><div id='phone'><img src='Phone-icon.png' id='phoneicon'> " + phone + "</div><div id='website>" + website + "</div>";
     addPopup(lat, lon, contents, globe);
     flyToFood(lat, lon, 18, globe, fakeglobe);  
 }
@@ -63,11 +60,7 @@ function getPlace() {
     var url = "https://dev.virtualearth.net/REST/v1/LocalSearch/?query=" + request.query + "&postalCode="+ request.location +"&key=AijXjmcFJtkiCBnTvxhwx7aRM0ICYB2-bQ8gFDp5glzXGN2-rAlCK_pqnmzPuZ2k&type=EatDrink&maxResults=20"
     console.log(url)
     var json = $.getJSON({'url': url, 'async': false});  
-
-    //The next line of code will filter out all the unwanted data from the object.
     json = JSON.parse(json.responseText); 
-
-    //You can now access the json variable's object data like this json.a and json.c
     console.log(json);
     picked = Math.floor((Math.random() * json.resourceSets[0].estimatedTotal));
     console.log(picked);
@@ -85,10 +78,9 @@ function getPlace() {
 
 
 /* Regard hitting enter as trying to click the submit button */
-    $(document).on("keypress", "input", function(e){
-        if(e.which == 13){
-            var inputVal = $(this).val();
-            getPlace();
-        }
-    });
-
+            $("#zip").keypress(function(e) {
+                //Enter key
+                if (e.which == 13) {
+                    getPlace();
+                }
+            });

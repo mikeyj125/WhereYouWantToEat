@@ -340,13 +340,22 @@ nav.topNav li{
 
 /* formatting for text inside the popup in the globe */
 #address{
-    
+    font-size: 14px;
 }
 
 #phone{
-    
+    font-size: 20px;
 }
 
 #website{
-    
+    color: blue;
+    font-style: italic;
+}
+
+#restname{
+    font-size: 44px;
+}
+#phoneicon{
+    max-height: 20px;
+    max-width: 20px;
 }
