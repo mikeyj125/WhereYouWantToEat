@@ -50,14 +50,14 @@ function presentWinner(name, address, phone, website, lat, lon){
     flyToFood(lat, lon, 18, globe, fakeglobe);  
 }
 function getPlace() {
-    var location = $("#zip").val();
-    var request = {
-        location: $("#zip").val(),
-        radius: "6000",
-        openNow: "true",
-        query: $("#cuisine").val(),
-    };
-    var url = "https://dev.virtualearth.net/REST/v1/LocalSearch/?query=" + request.query + "&postalCode="+ request.location +"&key=AijXjmcFJtkiCBnTvxhwx7aRM0ICYB2-bQ8gFDp5glzXGN2-rAlCK_pqnmzPuZ2k&type=EatDrink&maxResults=20"
+    var zipurl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $("#zip").val() + "&sensor=false&key=AIzaSyBnIrhidN5aiBFBVK9kgPDrISe0_MePQpw"; 
+    var jsonzip = $.getJSON({'url': zipurl, 'async': false});
+    console.log(jsonzip);
+    jsonzips = JSON.parse(jsonzip.responseText); 
+    var ziplat = jsonzips.results[0].geometry.location.lat;
+    var ziplon = jsonzips.results[0].geometry.location.lng;
+    var query = $("#cuisine").val();
+    var url = "https://dev.virtualearth.net/REST/v1/LocalSearch/?query=" + query + "&userLocation="+ ziplat + "," + ziplon +"&key=AijXjmcFJtkiCBnTvxhwx7aRM0ICYB2-bQ8gFDp5glzXGN2-rAlCK_pqnmzPuZ2k&type=EatDrink&maxResults=20"
     console.log(url)
     var json = $.getJSON({'url': url, 'async': false});  
     json = JSON.parse(json.responseText); 
